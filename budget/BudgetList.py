@@ -1,2 +1,2 @@
-class BudgetList(self, budget)
-    pass
+class BudgetList():
+        pass
