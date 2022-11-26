@@ -10,6 +10,12 @@ def main():
 
     if divided_set_comp != divided_for_loop:
         print('Sets are NOT equal by == test')
+        divided_expenses_sum = []
+        for category_exps in divided_set_comp:
+            divided_expenses_sum.append(sum( x.amount for x in category_exps))
+
+        ax.pie(divided_expenses_sum, labels = labels, autopct = '%1.1f%%')
+        plt.show()
 
     for a,b in zip(divided_for_loop, divided_set_comp):
         if not (a.issubset(b) and b.issubset(a)):
