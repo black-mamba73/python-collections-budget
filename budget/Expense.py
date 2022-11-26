@@ -34,6 +34,8 @@ class Expenses():
         food_expenses = {x for x in self.list
                         if x.category == 'Groceries' or x.category == 'Eating Out'}
 
+        unnecessary_expenses = set(self.list) - necessary_expenses - food_expenses
+
     def categorize_for_loop(self):
             necessary_expenses = set()
             food_expenses = set()
